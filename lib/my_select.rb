@@ -3,8 +3,9 @@ def my_select(collection)
  rval = []
  while i < collection.length
  if collection[i] == (yield collection[i])
-   return yield collection[i]
+   rval << collection[i]
  end
  i+=1
  end
+ rval
 end
